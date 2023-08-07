@@ -135,7 +135,13 @@ const BoxMessage = ({
 								<img src={dislikeSvg} alt='dislike' />
 								<p>No</p>
 							</div>
-              <BoxPagination counter={counter} setCounter={setCounter}/>
+              <BoxPagination 
+                counter={counter} 
+                setCounter={setCounter} 
+                addPrompt={addPrompt}
+                incrementPrompt={incrementPrompt}
+                setLessonNumber={setLessonNumber}
+              />
 							<p className='px-3 py-2 bg-[#1A1D21CC] text-nobel rounded-lg font-semibold text-xs stacked-fractions-[0.15px] cursor-pointer'>
 								Upload Example
 							</p>
@@ -148,7 +154,7 @@ const BoxMessage = ({
 						</div>
 					)}
 
-					{isBot && (
+					{/* {isBot && (
 						<div>
 							<p className='font-semibold text-[14px] leading-6 text-white mt-[30px] md:mt-[60px]'>
 								Below are suggested prompts to help you get started.
@@ -171,7 +177,7 @@ const BoxMessage = ({
 								))}
 							</div>
 						</div>
-					)}
+					)} */}
 				</div>
 			</div>
 		</div>

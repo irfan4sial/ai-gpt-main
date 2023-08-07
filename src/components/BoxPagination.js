@@ -6,7 +6,7 @@ const ResultData = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
 
 const BoxPagination = (props) => {
-  const { counter, setCounter } = props;
+  const { counter, setCounter, addPrompt, incrementPrompt, setLessonNumber } = props;
   const itemsPerPage = 1;
   
   const [itemOffset, setItemOffset] = useState(0);
@@ -22,6 +22,9 @@ const BoxPagination = (props) => {
     );
     setItemOffset(newOffset);
     setCounter(newOffset);
+    setLessonNumber(newOffset);
+    incrementPrompt(true)
+    addPrompt(`start lesson ${newOffset + 1}`)
   };
 
   function Items({ ResultData }) {
@@ -49,6 +52,7 @@ const BoxPagination = (props) => {
           breakLabel="..."
           nextLabel={<BsChevronRight className='text-[#9B9C9E]' />}
           onPageChange={handlePageClick}
+          onClick={handlePageClick}
           pageRangeDisplayed={3}
           pageCount={pageCount}
           forcePage={counter}

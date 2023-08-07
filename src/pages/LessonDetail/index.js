@@ -167,6 +167,7 @@ const LessonDetail = (props) => {
 
 		setState({ loading: false });
 	};
+  console.log('valuePrompt =>', valuePrompt, incrementPrompt, lessonNumber)
 	
 	return (
 		<div className='bg-[#363A3D] p-[12px] flex'>
@@ -293,7 +294,10 @@ const LessonDetail = (props) => {
 					>
 						Exit Lesson
 					</Button> */}
-					<Button onClick={() => navigate('/lesson-app')}>Save Lesson</Button>
+					<Button 
+            onClick={() => navigate('/lesson-app')}
+            className="hover:text-white"
+          >Save Lesson</Button>
 				</div>
 			</div>
 		</div>
